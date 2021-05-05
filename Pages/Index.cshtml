@@ -1,0 +1,45 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+<form asp-page="Index">
+    <div class="form-group">
+        <div class="form-group">
+            <label asp-for="Input.FirstName"></label>
+            <input class="form-control" asp-for="Input.FirstName" />
+            <span asp-validation-for="Input.FirstName"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Input.LastName"></label>
+            <input class="form-control" asp-for="Input.LastName" />
+            <span asp-validation-for="Input.LastName"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Input.Email"></label>
+            <input class="form-control" asp-for="Input.Email" />
+            <span asp-validation-for="Input.Email"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Input.DateOfBirth"></label>
+            <input class="form-control" asp-for="Input.DateOfBirth" />
+            <span asp-validation-for="Input.DateOfBirth"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Input.DateOfBirth"></label>
+            <input class="form-control" asp-for="Input.DateOfBirth" />
+            <span asp-validation-for="Input.DateOfBirth"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Input.Language"></label>
+            <select asp-for="Input.Language" asp-items="Model.Languages"></select>
+            <span asp-validation-for="Input.Language"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>

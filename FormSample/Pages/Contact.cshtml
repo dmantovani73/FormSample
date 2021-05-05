@@ -1,0 +1,29 @@
+﻿@page
+@model FormSample.Pages.ContactModel
+
+<form asp-page="Contact">
+    <div class="form-group">
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <input class="form-control" asp-for="Name" />
+            <span asp-validation-for="Name"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Email"></label>
+            <input class="form-control" asp-for="Email" />
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="DateOfBirth"></label>
+            <input class="form-control" asp-for="DateOfBirth" />
+            <span asp-validation-for="DateOfBirth"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Language"></label>
+            <select asp-for="Language" asp-items="Model.Languages"></select>
+            <span asp-validation-for="Language"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Register</button>
+    </div>
+</form>
